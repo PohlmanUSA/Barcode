@@ -19,7 +19,7 @@
     },
     "autoload": {
       "psr-0": {
-        "pohlmanusa\\barcode\\": ""
+        "pohlmanusa\\barcode\\": "src/"
       }
     }
 }
