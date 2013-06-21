@@ -1,5 +1,5 @@
 {
-    "name": "PohlmanUSA/barcode",
+    "name": "pohlmanusa/barcode",
     "description": "A barcode generating library based on Karim Mribti's code.",
     "version": "0.1.0",
     "license": "LGPL-2.1+",
