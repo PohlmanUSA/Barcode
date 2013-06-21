@@ -1,4 +1,5 @@
 <?php
+namespace PohlmanUSA\Barcode;
 /*
 Barcode Render Class for PHP using the GD graphics library 
 Copyright (C) 2001  Karim Mribti
@@ -103,7 +104,7 @@ define("BCD_C39_WIDE_BAR"        ,   2);
     {
       for($x=0;$x<strlen($value);$x++){
         if($this->getCharIndex($value[$x])==-1){
-          throw new InvalidArgumentException('String contains invalid characters');
+          throw new \InvalidArgumentException('String contains invalid characters');
         }
       }
       //wrap the value in asterisks for start/stop characters
@@ -137,7 +138,7 @@ define("BCD_C39_WIDE_BAR"        ,   2);
     {
       $len = strlen($this->value);
       if ($len == 0)  {
-        throw new RuntimeException('No value set to encode');
+        throw new \RuntimeException('No value set to encode');
       }
       //All characters are the same width
       $charSize  = BCD_C39_NARROW_BAR * $xres * 6 + BCD_C39_WIDE_BAR * $xres * 3;
@@ -201,7 +202,7 @@ define("BCD_C39_WIDE_BAR"        ,   2);
       
       $size = $this->getSize($xres);
       if($size==0){
-        throw new RuntimeException('Failed to calculate a valid size');
+        throw new \RuntimeException('Failed to calculate a valid size');
       }
       if ($this->mStyle & BCS_ALIGN_CENTER){
         $sPos = floor(($this->mWidth - $size ) / 2);

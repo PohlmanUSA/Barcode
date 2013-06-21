@@ -1,0 +1,26 @@
+{
+    "name": "PohlmanUSA/barcode",
+    "description": "A barcode generating library based on Karim Mribti's code.",
+    "version": "0.1.0",
+    "license": "LGPL-2.1+",
+    "authors": [
+        {
+            "name": "Karim Mribti",
+            "email": "barcode@mribti.com"
+        },
+        {
+            "name": "John Judy",
+            "email": "johnj@pohlmanusa.com"
+        }
+    ],
+    "require": {
+      "php": ">5.4.0",
+      "ext-gd": "*"
+    },
+    "autoload": {
+      "psr-0": {
+        "Barcode\\": "",
+        "PohlmanUSA\\Barcode\\": ""
+      }
+    }
+}

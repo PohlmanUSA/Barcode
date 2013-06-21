@@ -1,4 +1,5 @@
 <?php
+namespace PohlmanUSA\Barcode;
 /*
 Barcode Render Class for PHP using the GD graphics library 
 Copyright (C) 2001  Karim Mribti
@@ -74,10 +75,10 @@ Contact author at: barcode@mribti.com
     public function setValue($value)
     {
       if(!is_numeric($value)){
-        throw new InvalidArgumentException('C128c barcodes only accept numeric values');
+        throw new \InvalidArgumentException('C128c barcodes only accept numeric values');
       }
       if(strlen($value)%2>0){
-        throw new InvalidArgumentException('C128c barcodes expect all elements '
+        throw new \InvalidArgumentException('C128c barcodes expect all elements '
                                           .'to be a 0 padded two digit number');
       }
       $this->value = $value;
@@ -110,7 +111,7 @@ Contact author at: barcode@mribti.com
       $len = strlen($this->value);
       
       if ($len == 0)  {
-        throw new RuntimeException('No value set to encode');
+        throw new \RuntimeException('No value set to encode');
       }
       $ret = $checkSize = 0;
       //skip two because the code is based on a set of 0 padded two digit numbers
@@ -178,7 +179,7 @@ Contact author at: barcode@mribti.com
     {
       $size = $this->getSize($xres);
       if($size==0){
-        throw new RuntimeException('Failed to calculate a valid size');
+        throw new \RuntimeException('Failed to calculate a valid size');
       }
       if ($this->mStyle & BCS_ALIGN_CENTER){
         $sPos = floor(($this->mWidth - $size ) / 2);

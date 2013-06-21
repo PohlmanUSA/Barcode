@@ -1,4 +1,6 @@
 <?php
+namespace PohlmanUSA\Barcode;
+
 /*
 Barcode Render Class for PHP using the GD graphics library 
 Copyright (C) 2001  Karim Mribti
@@ -62,7 +64,7 @@ Contact author at: barcode@mribti.com
     {
       for($x=0;$x<strlen($value);$x++){
         if($this->getCharIndex($value[$x])==-1){
-          throw new InvalidArgumentException('String contains invalid characters');
+          throw new \InvalidArgumentException('String contains invalid characters');
         }
       }
       $this->value = $value;
@@ -95,7 +97,7 @@ Contact author at: barcode@mribti.com
       $len = strlen($this->value);
       
       if ($len == 0)  {
-        throw new RuntimeException('No value set to encode');
+        throw new \RuntimeException('No value set to encode');
       }
       $ret = $checkSize = 0;
       for ($i=0;$i<$len;$i++) {//calculates the width of the encoded string
@@ -160,7 +162,7 @@ Contact author at: barcode@mribti.com
     {
       $size = $this->getSize($xres);
       if($size==0){
-        throw new RuntimeException('Failed to calculate a valid size');
+        throw new \RuntimeException('Failed to calculate a valid size');
       }
       if ($this->mStyle & BCS_ALIGN_CENTER){
         $sPos = floor(($this->mWidth - $size ) / 2);

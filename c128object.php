@@ -1,4 +1,5 @@
 <?php
+namespace PohlmanUSA\Barcode;
 /*
 Barcode Render Class for PHP using the GD graphics library 
 Copyright (C) 2001  Karim Mribti
