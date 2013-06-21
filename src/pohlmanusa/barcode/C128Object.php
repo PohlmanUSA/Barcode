@@ -37,7 +37,7 @@ define("BCD_C128_BAR_4", 4);
  * A parent class for all C128 family barcodes
  * 
  */
-abstract class C128Object extends BarcodeObject {
+abstract class C128Object extends Barcode {
   
   /**
    * The mapping of character to barcode encoding

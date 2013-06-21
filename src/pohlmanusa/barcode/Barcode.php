@@ -85,7 +85,7 @@ define("BCD_DEFAULT_TEXT_OFFSET"     ,   2);
 /**
  * A parent class for all barcodes that defines basic ways of interacting with barcodes
  */
-abstract class BarcodeObject {
+abstract class Barcode {
   /**
    * The barcode width in pixels
    * 

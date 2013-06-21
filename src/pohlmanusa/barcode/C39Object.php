@@ -35,7 +35,7 @@ define("BCD_C39_WIDE_BAR"        ,   2);
    * Code 39 is an alphanumeric bar code that can encode decimal number, 
    * upper case alphabet and some special symbols.
    */
-  class C39Object extends BarcodeObject {
+  class C39Object extends Barcode {
     /**
      * Whether to draw the checksum character
      * 

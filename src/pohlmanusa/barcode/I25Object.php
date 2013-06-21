@@ -34,7 +34,7 @@ define("BCD_I25_WIDE_BAR"   , 2);
    * Render for Interleaved 2 of 5
    * Interleaved 2 of 5 is a numeric only bar code with a optional check number.
    */
-  class  I25Object extends BarcodeObject {
+  class  I25Object extends Barcode {
     /**
      * The mapping of character to barcode encoding
      * 
